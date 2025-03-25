@@ -73,7 +73,7 @@ class AtType:
         self.Fe = Fe
         self.ielement = ielement
         self.amass = amass
-        self.blat = math.sqrt(3.0) * self.re / 2
+        self.blat = self.re / math.sqrt(3.0) * 2
 
     def __repr__(self):
         output = """{}:
