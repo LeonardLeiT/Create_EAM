@@ -45,6 +45,7 @@ class AtType:
         Fe,        # Fe(eV)
         ielement,
         amass,
+        structure="FCC",
     ):
         self.name = name
         self.re = re
@@ -68,12 +69,11 @@ class AtType:
         self.F2 = F2
         self.F3_1 = F3_1
         self.F3_2 = F3_2
-        self.amass = amass
         self.eta = eta
         self.Fe = Fe
         self.ielement = ielement
         self.amass = amass
-        self.blat = self.re / math.sqrt(3.0) * 2
+        self.blat = self.re * math.sqrt(2) if structure == "FCC" else self.re / math.sqrt(3) * 2
 
     def __repr__(self):
         output = """{}:
@@ -120,6 +120,7 @@ class AtType:
 
 
 Database = {}
+
 """
 data from Yihan Wu et al. Developing a variable charge potential for Hf/Nb/Ta/Ti/Zr/O system via machine learning global optimization
 Materials & Design 230 (2023) 111999
