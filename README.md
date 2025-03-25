@@ -110,7 +110,7 @@ def embed(at, rho):
 ```python
 def create_eam(argv=None):
     ........
-    alatmax = max([Database[at].re for at in atnames])
+    alatmax = max([Database[at].blat for at in atnames])
     rhoemax = max([Database[at].rhoe for at in atnames])
     rc = np.sqrt(2) * alatmax ## BCC Third Nearest Neighbor
     rst = 0.5
