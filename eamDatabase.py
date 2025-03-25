@@ -45,7 +45,7 @@ class AtType:
         Fe,        # Fe(eV)
         ielement,
         amass,
-        structure="FCC",
+        structure="BCC",
     ):
         self.name = name
         self.re = re
